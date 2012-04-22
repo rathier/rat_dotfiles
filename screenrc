@@ -1,0 +1,24 @@
+term xterm
+startup_message  off
+activity 'action in %n'
+bell_msg 'Wuff %n'
+nethack on
+deflogin off
+login off
+defscrollback 5000
+#hardstatus alwayslastline "%w  %= %H | %d-%M-%Y %c"
+#hardstatus alwayslastline "%{kB}%w%{=r}  %= %H %?[%l]%? | %d-%M-%Y %c"
+#hardstatus alwayslastline "%{= bw}%-Lw%{= kb}%50>%n%f* %t%{-}%+Lw%< %= %H: %?[%l]%? | %d-%M-%Y %c"
+#hardstatus alwayslastline "%{= wb}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %= %H: %l | %d-%M-%Y %c"
+caption always "%{= bw}%-Lw%{= kw}%50>%n%f* %t%{-}%+Lw%<"
+backtick 1 10 10 ~/python/screen_load.py
+#hardstatus alwayslastline "%{= B}Host: %H - Load: [%1`] %= %{= G}%d-%M-%Y %c%{-}"
+hardstatus alwayslastline "%{= B}Host: %{g}%H%{-} - Load: [%1`] %= Date: %{G}%d-%M-%Y%{-} Time: %{G}%c%{-}"
+
+##logging:
+logfile "~/.screen_logs/screenlog.%Y%m%d_window_%n"
+#log on
+logtstamp on
+######### Keybindings
+bind t screen htop
+bind v screen vim
