@@ -1,5 +1,42 @@
 " File: .vimrc von Rainer Thierfelder
 
+" vundle start " {{{
+filetype off
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'acustodioo/vim-tmux'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/Lucius'
+Bundle 'rson/vim-conque'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim.git'
+Bundle 'snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
+" non github repos
+"Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+filetype plugin indent on     " required!
+
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"vundle end " }}}
+
 " settings {{{
 set hlsearch      " gefundene teffer markieren
 set ruler         " cursorposition anzeigen
@@ -43,47 +80,9 @@ endif
 
 if has("gui_running")
     set guifont="Courier 10 Pitch 10"
-    colorscheme solarized
+"    colorscheme solarized
 endif
 " }}}
-
-" vundle start " {{{
-filetype off
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'acustodioo/vim-tmux'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/Lucius'
-Bundle 'rson/vim-conque'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim.git'
-Bundle 'snipmate-snippets'
-Bundle 'garbas/vim-snipmate'
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-" ...
-
-filetype plugin indent on     " required!
-
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-"vundle end " }}}
-
 "set sw=2
 
 filetype plugin on
