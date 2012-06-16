@@ -54,7 +54,6 @@ set expandtab
 set mouse=""
 set modeline
 set modelines=4
-set t_Co=256
 set wildmode=list:longest,list:full
 set wildmenu
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
