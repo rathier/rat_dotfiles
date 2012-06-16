@@ -56,7 +56,7 @@ set modeline
 set modelines=4
 set wildmode=list:longest,list:full
 set wildmenu
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:>-,trail:☠,extends:>,precedes:<
 set list
 set encoding=utf-8
 " statuszeile
