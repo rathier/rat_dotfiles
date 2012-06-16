@@ -82,7 +82,6 @@ if has("gui_running")
 "    colorscheme solarized
 endif
 " }}}
-"set sw=2
 
 filetype plugin on
 source $VIMRUNTIME/ftplugin/man.vim
