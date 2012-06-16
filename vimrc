@@ -56,6 +56,14 @@ set modeline
 set modelines=4
 set wildmode=list:longest,list:full
 set wildmenu
+"UTF-Codes: http://en.wikipedia.org/wiki/Unicode_symbols
+"http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes
+"▷ u35b7
+"http://en.wikipedia.org/wiki/Dingbat
+"➟ u279f
+"✄ u2704
+"✧ u2727
+"⤦ u2926
 set listchars=eol:¬,tab:>-,trail:☠,extends:>,precedes:<
 set list
 set encoding=utf-8
