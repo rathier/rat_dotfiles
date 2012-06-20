@@ -135,8 +135,8 @@ match errorMsg /\(2[5][6-9]\|2[6-9][0-9]\|[3-9][0-9][0-9]\)[.]
 " 192.-168.234.24
 
 
-"abkuerzungen
+"abkuerzungen {{{
 iab dts <C-R>=strftime("%F")<CR>
 "iab lcts <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 iab lcts <C-R>=strftime("%c %Z")<CR>
-
+" }}}
