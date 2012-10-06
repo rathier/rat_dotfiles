@@ -134,5 +134,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[ -e ~/.bashrc.post.local ] && source ~/.bashrc.post.local
+# has to be put in an if-clause, otherwise $? would be 1 and opening a new shell would show an error
+if [ -e ~/.bashrc.post.local ];then
+  source ~/.bashrc.post.local
+fi
 
