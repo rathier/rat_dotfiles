@@ -82,7 +82,7 @@ set background=light
 
 if has("syntax")
   syntax on
-  colorscheme proton
+  colorscheme lucius
 endif
 
 if has("gui_running")
@@ -93,10 +93,6 @@ endif
 
 filetype plugin on
 source $VIMRUNTIME/ftplugin/man.vim
-
-let UMD_DateToken='Last Change: '
-let UMD_DatePattern = '\w\{3\}\s\w\{3\}\s\+\d\+\s\+\d\+:\d\+:\d\+\s\+\w\{3,4\}\s\+\d\+'
-let UMD_DateCommand = 'date | tr -d "\n"'
 
 " explorer benutzt ab vim7 netrw
 let g:netrw_altv = 1
