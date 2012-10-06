@@ -95,6 +95,10 @@ prompt_utf8(){
 }
 # /prompt_functions }}}2
 prompt_utf8
+# for tmux-powerline
+if [ -n "$TMUX" ]; then
+  PS1=${PS1}'$([ -n $TMUX ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
+fi
 # /prompt }}}1
 
 # enable color support of ls and also add handy aliases
