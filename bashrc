@@ -28,6 +28,9 @@ shopt -s extglob
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# git
+export GIT_PS1_SHOWDIRTYSTATE=1
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -91,8 +94,9 @@ prompt_minimal() {
 }
 
 prompt_utf8(){
-  PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w \$ "'
+  PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w $(__git_ps1 "[%s]") \$ "'
 }
+
 # /prompt_functions }}}2
 prompt_utf8
 # /prompt }}}1
