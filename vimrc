@@ -91,7 +91,6 @@ if has("gui_running")
 endif
 " }}}
 
-filetype plugin on
 source $VIMRUNTIME/ftplugin/man.vim
 
 " explorer benutzt ab vim7 netrw
