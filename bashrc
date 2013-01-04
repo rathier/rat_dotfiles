@@ -9,7 +9,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ "$COLORTERM" = "gnome-terminal" ] && [ -n "${TMUX}" -a -n "${PTY}" ]
+if [ "$COLORTERM" = "gnome-terminal" ] && [ -z "${TMUX}" -a -z "${PTY}" ]
 then
     export TERM=xterm-256color
 fi
