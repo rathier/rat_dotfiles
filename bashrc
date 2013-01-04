@@ -9,9 +9,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ "$COLORTERM" = "gnome-terminal" ]
+if [ "$COLORTERM" = "gnome-terminal" ] && [ -n "${TMUX}" -a -n "${PTY}" ]
 then
-    export TERM=screen-256color
+    export TERM=xterm-256color
 fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -43,6 +43,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
+    xterm-256color) color_prompt=yes;;
     screen-256color) color_prompt=yes;;
 esac
 

@@ -1,4 +1,4 @@
-term xterm
+term screen-256color
 startup_message  off
 activity 'action in %n'
 bell_msg 'Wuff %n'
