@@ -26,9 +26,9 @@ for file in $files; do
     if [ -f ~/.$file ]; then
         echo "Move $file from ~ to $olddir"
         mv ~/.$file ~/dotfiles_old/
-        echo "Creating symlink to $file in home directory."
-        ln -s $dir/$file ~/.$file
     fi
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.$file
 done
 
 [ ! -d ~/.vim/bundle/vundle ] && setup_vundle
