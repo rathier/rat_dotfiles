@@ -19,6 +19,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim.git'
 Bundle 'snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
+Bundle 'Shougo/unite.vim'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
