@@ -5,21 +5,26 @@ filetype off
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'acustodioo/vim-tmux'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Lucius'
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim.git'
-Bundle 'snipmate-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'Shougo/unite.vim'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-sleuth'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+"Bundle 'SirVer/ultisnips'
+
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -75,7 +80,6 @@ set laststatus=2
 set foldenable
 set foldmethod=marker
 set background=light
-let g:Powerline_symbols='unicode'
 let g:lucius_style='light'
 set background=light
 
@@ -86,11 +90,52 @@ endif
 
 if has("gui_running")
     set guifont="Courier 10 Pitch 10"
-"    colorscheme solarized
 endif
 " }}}
 
-source $VIMRUNTIME/ftplugin/man.vim
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost rat_dotfiles/vimrc source $MYVIMRC
+endif
+"
+"
+" unite-config {{{
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" /unite-config }}}
+" airline-configuration {{{
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_theme='light'
+let g:airline_paste_symbol = 'Þ'
+" /airline-configuration }}}
+" mappings {{{
+let mapleader=","
+nmap <leader>v :tabnew $MYVIMRC<CR>
+nmap <leader>p :set paste!<CR>
+" nmap <F9> :call RATPingHost("<cword>")<CR>
+" unite-mappings {{{2
+nnoremap <leader>b :<C-u>Unite buffer<CR>
+nnoremap <leader>f :<C-u>Unite -start-insert file<CR>
+nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
+" /unite-mappings }}}2
+" /mappings }}}
+" snipmate-config {{{
+let g:snips_author="Rainer Thierfelder"
+let g:snips_email="r.thierfelder@science-computing.de"
+let g:snips_github=""
+" /snipmate-config }}}
+
+" fuer latex-suite, wegen grep-Problemen:
+set grepprg=grep\ -nH\ $*
+
+"fuer spellchecking
+"set spell
+"set spelllang=de
+"highlight SpellErrors ctermfg=Red guifg=Yellow cterm=underline
+
+" zum testen:
+set thesaurus="home/thierf/tmp/thesaurus.txt"
+set guifont="Courier 10"
 
 " explorer benutzt ab vim7 netrw
 let g:netrw_altv = 1
@@ -104,33 +149,8 @@ let g:Twiki_SourceHTMLSyntax=0
 
 
 "eigene Highlightdefinitionen
-"alle Tabs als ERROR markieren:
-match errorMsg /[\t]/
-"gueltige IPs als TODO markieren:
-"match todo /\(\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)\.\)\{3\}\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)/
-"ungueltige IPs als ERROR markieren:
-match errorMsg /\(2[5][6-9]\|2[6-9][0-9]\|[3-9][0-9][0-9]\)[.]
-               \[0-9]\{1,3\}[.][0-9]\{1,3\}[.][0-9]\{1,3\}\|
-               \[0-9]\{1,3\}[.]\(2[5][6-9]\|2[6-9][0-9]\|
-               \[3-9][0-9][0-9]\)[.][0-9]\{1,3\}[.][0-9]
-               \\{1,3\}\|[0-9]\{1,3\}[.][0-9]\{1,3\}[.]\(2[5]
-               \[6-9]\|2[6-9][0-9]|[3-9][0-9][0-9]\)[.][0-9]\{1,3\}
-               \\|[0-9]\{1,3\}[.][0-9]\{1,3\}[.][0-9]\{1,3\}[.]
-               \\(2[5][6-9]\|2[6-9][0-9]\|[3-9][0-9][0-9]\)/
-" IP-Match-Test
-" gueltig:
-" 253.234.126.254
-" 53.72.140.188
-" 255.255.255.255
-" 53.72.188.240
-" ungueltig:
-" 265.256.255.255
-" 299.299.299.300
-" 192.-168.234.24
-
 
 "abkuerzungen {{{
 iab dts <C-R>=strftime("%F")<CR>
-"iab lcts <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 iab lcts <C-R>=strftime("%c %Z")<CR>
 " }}}
