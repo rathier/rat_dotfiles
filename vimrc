@@ -51,9 +51,9 @@ set nocompatible  " nicht kompatibel zum vi
 set number        " Zeilennummerierung einschalten
 set cursorline    " aktuelle Zeile hervorheben
 set t_Co=256      " 256 colors terminal
-set shiftwidth=2
+set shiftwidth=4
 set tabstop=8
-set softtabstop=2
+set softtabstop=4
 set expandtab
 set mouse=""
 set modeline
