@@ -70,29 +70,35 @@ else
 fi
 unset color_prompt force_color_prompt
 
+## settings for git prompt __git_ps1 {{{2
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWCOLORHINTS=true
+## /settings for git prompt __git_ps1 }}}2
+
 
 # prompt_functions (https://github.com/rathier/spielereien.git) {{{2
 prompt_ubuntu_color() {
-  unset PROMPT_COMMAND
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    unset PROMPT_COMMAND
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 }
 
 prompt_ubuntu_default() {
-  unset PROMPT_COMMAND
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    unset PROMPT_COMMAND
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 }
 
 prompt_normal() {
-  PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\][${RES}]\[\033[0m\]" || RES_PROMPT=""; history -a; PS1="${RES_PROMPT}[\A][\!][\u@\h] \w \$ "'
+    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\][${RES}]\[\033[0m\]" || RES_PROMPT=""; history -a; PS1="${RES_PROMPT}[\A][\!][\u@\h] \w $(__git_ps1 "(%s)") \$ "'
 }
 
 prompt_minimal() {
-  unset PROMPT_COMMAND
-  PS1='\$ '
+    unset PROMPT_COMMAND
+    PS1='\$ '
 }
 
 prompt_utf8(){
-  PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w \$ "'
+    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w $(__git_ps1 "(%s)") \$ "'
 }
 # /prompt_functions }}}2
 prompt_utf8
@@ -137,6 +143,6 @@ fi
 
 # has to be put in an if-clause, otherwise $? would be 1 and opening a new shell would show an error
 if [ -e ~/.bashrc.post.local ];then
-  source ~/.bashrc.post.local
+    source ~/.bashrc.post.local
 fi
 
