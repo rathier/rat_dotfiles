@@ -105,7 +105,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " airline-configuration {{{
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
-let g:airline_theme='light'
+let g:airline_theme='lucius'
 let g:airline_paste_symbol = 'Þ'
 " /airline-configuration }}}
 " mappings {{{
