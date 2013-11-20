@@ -89,7 +89,8 @@ if has("syntax")
 endif
 
 if has("gui_running")
-    set guifont="Courier 10 Pitch 10"
+"    set guifont="Courier 10 Pitch 10"
+    set guifont=Inconsolata\ 12
 endif
 " }}}
 
@@ -105,7 +106,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " airline-configuration {{{
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
-let g:airline_theme='lucius'
+let g:airline_theme = 'lucius'
 let g:airline_paste_symbol = 'Þ'
 " /airline-configuration }}}
 " mappings {{{
@@ -135,7 +136,6 @@ set grepprg=grep\ -nH\ $*
 
 " zum testen:
 set thesaurus="home/thierf/tmp/thesaurus.txt"
-set guifont="Courier 10"
 
 " explorer benutzt ab vim7 netrw
 let g:netrw_altv = 1
