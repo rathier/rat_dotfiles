@@ -94,6 +94,10 @@ if has("gui_running")
 endif
 " }}}
 
+if exists("&colorcolumn")
+  set colorcolumn=80
+endif
+
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
   autocmd bufwritepost rat_dotfiles/vimrc source $MYVIMRC
