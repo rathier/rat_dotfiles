@@ -101,7 +101,8 @@ prompt_utf8(){
     PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w $(__git_ps1 "(%s)") \$ "'
 }
 # /prompt_functions }}}2
-prompt_utf8
+#prompt_utf8
+prompt_normal
 # /prompt }}}1
 
 # enable color support of ls and also add handy aliases
