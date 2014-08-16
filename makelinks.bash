@@ -26,13 +26,16 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    if [ -f ~/.$file ]; then
-        echo "Move $file from ~ to $olddir"
+    # -f tests for regular file, -h test for symbolic link
+    if [ -f ~/.$file -a ! -h ~/.$file ]; then
+        echo "Move .$file from ~ to $olddir"
         mv ~/.$file ~/dotfiles_old/
     fi
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
 
-[ ! -d ~/.vim/bundle/vundle ] && setup_vundle
+if [ ! -d ~/.vim/bundle/vundle ]; then
+    setup_vundle
+fi
 
