@@ -1,0 +1,51 @@
+! eigene versuche
+*localTerminal:  xterm-256color
+*xterm*termName: xterm-256color
+*customization:  -256color
+
+! resources for xterms
+*xterm*faceName:        Inconsolata
+*xterm*faceSize:        12
+*xterm*background:      white
+*xterm*cursorColor:     #0033cc
+*xterm*pointerColor:    steelblue
+*xterm*fullCursor:      false
+*xterm*cursorBlink:     true
+*xterm*deiconifyWarp:   true
+*xterm*foreground:      black
+*xterm*locale:          true
+*xterm*internalBorder:  0
+*xterm*visualBell:      true
+*xterm*jumpScroll:      true
+*xterm*highlightColor:  lightsteelblue
+*xterm*scrollBar:       false
+*xterm*saveLines:       0
+!Make sure xterm handles NLS input
+*xterm*eightBitInput:   true
+!make sure backspace works as labeled
+*xterm*stty:            erase
+*xterm*BackarrowKey:    true
+!!xterm-colors
+!
+!XTerm*color0:    #000000
+!XTerm*color1:    #9e1828
+!XTerm*color2:    #aece92
+!XTerm*color3:    #968a38
+!XTerm*color4:    #414171
+!XTerm*color5:    #96c359
+!XTerm*color6:    #418179
+!XTerm*color7:    #bebebe
+!XTerm*color8:    #666666
+!XTerm*color9:    #cf6171
+!XTerm*color10:     #c5f779
+!XTerm*color11:     #fff796
+!color12: brightblue
+*xterm*color12:     #5c5cff
+!XTerm*color13:     #cf9ebe
+!XTerm*color14:     #71bebe
+!XTerm*color15:     #ffffff
+!
+! Bei Doppelklick / als normalen Buchstaben auffassen
+! XTerm*charClass:                47:48
+! Bei Doppelklick -./@: als normalen Buchstaben auffassen
+*xterm*charClass:                45-47:48,64:48,58:48

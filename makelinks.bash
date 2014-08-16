@@ -2,9 +2,12 @@
 ############################
 # wie in http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/ gelesen
 
-dir=~/rat_dotfiles           # dotfiles directory
-olddir=~/dotfiles_old        # old dotfiles backup directory
-files="bashrc vimrc screenrc tmux.conf" # list of files/folders to symlink in homedir
+# dotfiles directory
+dir=~/rat_dotfiles
+# old dotfiles backup directory
+olddir=~/dotfiles_old
+# list of files/folders to symlink in homedir
+files="bashrc vimrc screenrc tmux.conf Xresources"
 
 setup_vundle() {
     mkdir -p .vim/bundle
