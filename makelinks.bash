@@ -10,7 +10,7 @@ olddir=~/dotfiles_old
 files="bashrc vimrc screenrc tmux.conf Xresources"
 
 setup_vundle() {
-    mkdir -p .vim/bundle
+    mkdir -p ~/.vim/bundle
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 }
 
