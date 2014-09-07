@@ -64,4 +64,4 @@
 ! Bei Doppelklick / als normalen Buchstaben auffassen
 ! XTerm*charClass:                47:48
 ! Bei Doppelklick -./@:~ als normalen Buchstaben auffassen
-*xterm*charClass:                45-47:48,64:48,58:48,164:48
+*xterm*charClass:                45-47:48,64:48,58:48,126:48
