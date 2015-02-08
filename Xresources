@@ -1,4 +1,5 @@
 ! eigene versuche
+! xterm
 *localTerminal:  xterm-256color
 *xterm*termName: xterm-256color
 *customization:  -256color
@@ -65,3 +66,91 @@
 ! XTerm*charClass:                47:48
 ! Bei Doppelklick -./@:~ als normalen Buchstaben auffassen
 *xterm*charClass:                45-47:48,64:48,58:48,126:48
+
+! urxvt
+! Prev was 13.
+
+URxvt*font: xft:Inconsolata:regular:pixelsize=15:antialias=true:hinting=true
+URxvt*boldFont: xft:Inconsolata:bold:pixelsize=15:antialias=true:hinting=true
+URxvt.letterSpace: -1
+
+URxvt*urgentOnBell: true
+
+URxvt*.transparent: false
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+URxvt*.shading: 50
+
+urxvt*depth: 32
+urxvt*scrollBar: false
+
+! Clip board handling
+URxvt.perl-ext-common: clipboard,default,matcher
+URxvt.keysym.M-y:   perl:clipboard:copy
+URxvt.keysym.M-p:   perl:clipboard:paste
+URxvt.keysym.M-C-p: perl:clipboard:paste_escaped
+
+URxvt.url-launcher: /usr/bin/iceweasel
+URxvt.matcher.button:   1
+
+!*color0:#555753
+! *color0:#000000
+! *color8:#202020
+! *color1:#CC0000
+! *color9:#EF2929
+! *color2:#6AAD2B
+! *color10:#ABFD5B
+! *color3:#C4A000
+! *color11:#FCE94F
+! *color4:#3465A4
+! *color12:#1793D0
+! *color5:#948696
+! *color13:#BCACBB
+! *color6:#06989A
+! *color14:#34E2E2
+! *color7:#EEEEEE
+! *color15:#FFFFFF
+
+! ###    lovelybacon.deviantart.com   ####
+
+urxvt*termName:            rxvt
+urxvt*background:          #2d2d2d
+urxvt*foreground:          #dedede
+urxvt*highlightColor:      lightsteelblue
+urxvt*highlightTextColor:  #2d2d2d
+urxvt*matcher.button:      1
+urxvt.transparent:         true
+urxvt*allow_bold:          false
+!Xft*dpi:                   96
+!Xft*antialias:             true
+!Xft*hinting:               full
+
+! URxvt*geometry: 85x11
+! URxvt*fading:        0
+! URxvt*tintColor:     #ffffff
+! URxvt*shading:        0
+! URxvt*inheritPixmap:     False
+
+!black  0=htop colors dedede
+ *color0:  #2d2d2d
+ *color8: #dedede
+!red
+ *color1:  #d64937
+ *color9:  #d64937
+!green
+ *color2:  #4ac237
+ *color10: #4ac237
+!yellow
+ *color3:  #ded32e
+ *color11: #ded32e
+!blue
+ *color4:  #3465A4
+ *color12: #1793D0
+!magenta
+ *color5:  #d64937
+ *color13: #d64937
+!cyan
+ *color6:  #32bbc2
+ *color14: #dedede
+!white
+ *color7:  #dedede
+ *color15: #dedede
