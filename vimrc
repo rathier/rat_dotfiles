@@ -23,6 +23,9 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
+Bundle 'wimstefan/Lightning'
+Bundle 'vimwiki/vimwiki'
+Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'SirVer/ultisnips'
 
 " non github repos
@@ -91,6 +94,9 @@ endif
 if has("gui_running")
 "    set guifont="Courier 10 Pitch 10"
     set guifont=Inconsolata\ 12
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=l
 endif
 " }}}
 
@@ -123,6 +129,15 @@ nnoremap <leader>b :<C-u>Unite buffer<CR>
 nnoremap <leader>f :<C-u>Unite -start-insert file<CR>
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
 " /unite-mappings }}}2
+" deactivate arrow-keys in insert mode
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
 " /mappings }}}
 " snipmate-config {{{
 let g:snips_author="Rainer Thierfelder"
