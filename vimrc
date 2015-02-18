@@ -95,8 +95,13 @@ if has("gui_running")
 "    set guifont="Courier 10 Pitch 10"
     set guifont=Inconsolata\ 12
     set guioptions-=m
+    set guioptions-=b
     set guioptions-=T
     set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions+=c
 endif
 " }}}
 
@@ -114,10 +119,14 @@ endif
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " /unite-config }}}
 " airline-configuration {{{
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 let g:airline_theme = 'lucius'
-let g:airline_paste_symbol = 'Þ'
+" let g:airline_paste_symbol = 'Þ'
+let g:airline_symbols.paste = 'Þ'
 " /airline-configuration }}}
 " mappings {{{
 let mapleader=","
