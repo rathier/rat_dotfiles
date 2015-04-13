@@ -2,11 +2,11 @@
 
 " vundle start " {{{
 filetype off
-set runtimepath+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
