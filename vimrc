@@ -110,8 +110,8 @@ if exists("&colorcolumn")
 endif
 
 if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost rat_dotfiles/vimrc source $MYVIMRC
+  autocmd BufWritePost .vimrc nested source $MYVIMRC
+  autocmd BufWritePost rat_dotfiles/vimrc nested source $MYVIMRC
 endif
 "
 "
