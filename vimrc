@@ -85,6 +85,7 @@ set foldmethod=marker
 set background=light
 let g:lucius_style='light'
 set background=light
+set relativenumber
 
 if has("syntax")
   syntax on
