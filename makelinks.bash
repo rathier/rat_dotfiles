@@ -11,7 +11,7 @@ files="bashrc vimrc screenrc tmux.conf Xresources"
 
 setup_vundle() {
     mkdir -p ~/.vim/bundle
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 }
 
 # create dotfiles_old in homedir
@@ -35,7 +35,7 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-if [ ! -d ~/.vim/bundle/vundle ]; then
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     setup_vundle
 fi
 
