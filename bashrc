@@ -89,7 +89,7 @@ prompt_ubuntu_default() {
 }
 
 prompt_normal() {
-    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\][${RES}]\[\033[0m\]" || RES_PROMPT=""; history -a; PS1="${RES_PROMPT}[\A][\!][\u@\h] \w $(__git_ps1 "(%s)") \$ "'
+    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\][${RES}]\[\033[0m\]" || RES_PROMPT=""; history -a; PS1="${RES_PROMPT}[\A][\!][\u@\h] \w $(__git_ps1 "(%s) ")\$ "'
 }
 
 prompt_minimal() {
@@ -98,7 +98,7 @@ prompt_minimal() {
 }
 
 prompt_utf8(){
-    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w $(__git_ps1 "(%s)") \$ "'
+    PROMPT_COMMAND='RES=$?; [[ ${RES} -ne 0 ]] && RES_PROMPT="\[\033[0;31m\]✗\[\033[0m\] (${RES})" || RES_PROMPT="\[\033[0;32m\]✓\[\033[0m\]"; history -a; PS1="[${RES_PROMPT}][\A][\!][\u@\h] \w $(__git_ps1 "(%s) ")\$ "'
 }
 # /prompt_functions }}}2
 #prompt_utf8
