@@ -1,2 +1,2 @@
-=some of my dotfiles=
+#some of my dotfiles
 
