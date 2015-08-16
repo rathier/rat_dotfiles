@@ -26,6 +26,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'wimstefan/Lightning'
 Bundle 'vimwiki/vimwiki'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'dogrover/vim-pentadactyl'
 "Bundle 'SirVer/ultisnips'
 
 " non github repos
