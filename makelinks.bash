@@ -12,6 +12,7 @@ files="bashrc vimrc screenrc tmux.conf Xresources"
 setup_vundle() {
     mkdir -p ~/.vim/bundle
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +BundleInstall
 }
 
 # create dotfiles_old in homedir
