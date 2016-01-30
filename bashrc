@@ -7,6 +7,15 @@
 [ -e ~/.bashrc.pre.local ] && source ~/.bashrc.pre.local
 
 ## functions {{{1
+coinflip () {
+    if [[ $# -le 2 ]]; then
+        OPTION_ONE=${1:-heads}
+        OPTION_TWO=${2:-tails}
+        [[ $((RANDOM % 2 )) -eq 0 ]] && echo "${OPTION_ONE}" || echo "${OPTION_TWO}"
+    else
+        echo "coinflip takes a maximum of two options"
+    fi
+}
 ## /functions }}}1
 
 # If not running interactively, don't do anything
