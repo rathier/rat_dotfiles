@@ -6,6 +6,9 @@
 # ..pre.. getst  sourced in the beginning, -..post.. at the end
 [ -e ~/.bashrc.pre.local ] && source ~/.bashrc.pre.local
 
+## functions {{{1
+## /functions }}}1
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
