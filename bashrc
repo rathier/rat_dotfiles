@@ -11,7 +11,9 @@ coinflip () {
     if [[ $# -le 2 ]]; then
         OPTION_ONE=${1:-heads}
         OPTION_TWO=${2:-tails}
-        [[ $((RANDOM % 2 )) -eq 0 ]] && echo "${OPTION_ONE}" || echo "${OPTION_TWO}"
+        # (( 0 )) -> false
+        # (( RANDOM % 2 )) && echo odd || echo even
+        (( RANDOM % 2 )) && echo "${OPTION_ONE}" || echo "${OPTION_TWO}"
     else
         echo "coinflip takes a maximum of two options"
     fi
