@@ -134,6 +134,7 @@ let g:airline_symbols.paste = 'Þ'
 " mappings {{{
 let mapleader=","
 nmap <leader>v :tabnew $MYVIMRC<CR>
+nmap <leader>sv :source $MYVIMRC<CR>
 nmap <leader>p :set paste!<CR>
 " nmap <F9> :call RATPingHost("<cword>")<CR>
 " unite-mappings {{{2
