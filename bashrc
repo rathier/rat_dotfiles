@@ -18,6 +18,26 @@ coinflip () {
         echo "coinflip takes a maximum of two options"
     fi
 }
+
+expand_path () {
+    # usage: expand_path path [[after]|before]
+    _before=""
+    _after=""
+    # if given with / at the end, delete it
+    _dir=${1%/}
+    if [[ -n "${2}" && ${2} = "before" ]]; then
+        _before="${_dir}:"
+    else
+        _after=":${_dir}"
+    fi
+    if [[ -d $_dir ]]; then
+        if [[ ${PATH} =~ (:|^)${_dir}(:|$) ]]; then
+            :
+        else
+            export PATH="${_before}${PATH}${_after}"
+        fi
+    fi
+}
 ## /functions }}}1
 
 # If not running interactively, don't do anything
