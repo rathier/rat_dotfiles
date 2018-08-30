@@ -38,6 +38,10 @@ expand_path () {
         fi
     fi
 }
+
+find_vim_swaps () {
+    find ~/ -name '*.sw[mnop]'
+}
 ## /functions }}}1
 
 # If not running interactively, don't do anything
