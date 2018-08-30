@@ -70,6 +70,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+_VIM=$(type -p vim)
+[ -x "${_VIM}" ] && export EDITOR="${_VIM}"
+
+expand_path ~/bin before
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -159,9 +164,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-_VIM=$(type -p vim)
-[ -x "${_VIM}" ] && export EDITOR="${_VIM}"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
