@@ -8,15 +8,17 @@
 
 ## functions {{{1
 coinflip () {
-    if [[ $# -le 2 ]]; then
-        OPTION_ONE=${1:-heads}
-        OPTION_TWO=${2:-tails}
-        # (( 0 )) -> false
-        # (( RANDOM % 2 )) && echo odd || echo even
-        (( RANDOM % 2 )) && echo "${OPTION_ONE}" || echo "${OPTION_TWO}"
-    else
-        echo "coinflip takes a maximum of two options"
-    fi
+    # if $1 and $2 are not set, set them with defaults
+    # set all other positional parameters as they are provided
+    set -- "${1:-heads}" "${2:-tails}" "${@:3}"
+    # evaluate the arithmetic expression, which returns a number and
+    # echo that positional parameter
+    # $RANDOM modulo $# returns a random value from 0 to $#-1
+    # pretty equally distributed
+    # to test distribution:
+    # for i in {1..10000}; do echo $(( RANDOM % 7 )); done | sort -n | uniq -c
+    # so add 1 to correpond to the positional parameters
+    eval echo \$$(( 1 + RANDOM % $# ))
 }
 
 expand_path () {
