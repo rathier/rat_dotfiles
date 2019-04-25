@@ -42,14 +42,14 @@ expand_path () {
 }
 
 find_vim_swaps () {
-    find ~/ -name '*.sw[mnop]'
+    find ~/ -name '*.sw[mnop]' -ls
 }
 ## /functions }}}1
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ "$COLORTERM" = "gnome-terminal" ] && [ -z "${TMUX}" -a -z "${PTY}" ]
+if [ "$COLORTERM" = "gnome-terminal" ] && [ -z "${TMUX}" ] && [ -z "${PTY}" ]
 then
     export TERM=xterm-256color
 fi
