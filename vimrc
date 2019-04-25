@@ -167,7 +167,7 @@ set grepprg=grep\ -nH\ $*
 "highlight SpellErrors ctermfg=Red guifg=Yellow cterm=underline
 
 " zum testen:
-set thesaurus="home/thierf/tmp/thesaurus.txt"
+" set thesaurus="home/thierf/tmp/thesaurus.txt"
 
 " explorer benutzt ab vim7 netrw
 let g:netrw_altv = 1
