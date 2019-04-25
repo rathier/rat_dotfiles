@@ -10,7 +10,7 @@ Bundle 'gmarik/Vundle.vim'
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'tmux-plugins/vim-tmux'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/Lucius'
