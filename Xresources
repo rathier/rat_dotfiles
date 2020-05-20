@@ -1,82 +1,42 @@
 ! eigene versuche
 ! xterm
 *localTerminal:  xterm-256color
-XTerm*termName: xterm-256color
+UXTerm*termName: xterm-256color
 *customization:  -256color
 
 ! resources for xterms
-XTerm*faceName:        Inconsolata
-XTerm*faceSize:        11
-XTerm*background:      white
-XTerm*cursorColor:     #0033cc
-XTerm*pointerColor:    steelblue
-XTerm*fullCursor:      false
-XTerm*cursorBlink:     true
-XTerm*deiconifyWarp:   true
-XTerm*foreground:      black
-XTerm*locale:          true
-XTerm*internalBorder:  0
-XTerm*visualBell:      true
-XTerm*jumpScroll:      true
-XTerm*highlightColor:  lightsteelblue
-XTerm*scrollBar:       false
-XTerm*saveLines:       0
+UXTerm*faceName:        Inconsolata
+UXTerm*faceSize:        10
+UXTerm*background:      white
+UXTerm*cursorColor:     #0033cc
+UXTerm*pointerColor:    steelblue
+UXTerm*fullCursor:      false
+UXTerm*cursorBlink:     true
+UXTerm*deiconifyWarp:   true
+UXTerm*foreground:      black
+UXTerm*locale:          true
+UXTerm*internalBorder:  0
+UXTerm*visualBell:      true
+UXTerm*jumpScroll:      true
+UXTerm*highlightColor:  lightsteelblue
+UXTerm*scrollBar:       false
+UXTerm*saveLines:       0
 !Make sure xterm handles NLS input
-XTerm*eightBitInput:   true
+UXTerm*eightBitInput:   true
 !make sure backspace works as labeled
-XTerm*stty:            erase
-XTerm*BackarrowKey:    true
+UXTerm*stty:            erase
+UXTerm*BackarrowKey:    true
 !!xterm-colors
 !
 !
 ! Bei Doppelklick / als normalen Buchstaben auffassen
-! XTerm*charClass:                47:48
+! XTerm.charClass:                47:48
 ! Bei Doppelklick -./@:~ als normalen Buchstaben auffassen
-XTerm*charClass:                45-47:48,64:48,58:48,126:48
+UXTerm*charClass:                45-47:48,64:48,58:48,126:48
 
-! urxvt
-! Prev was 13.
-
-URxvt*font: xft:Inconsolata:regular:pixelsize=15:antialias=true:hinting=true
-URxvt*boldFont: xft:Inconsolata:bold:pixelsize=15:antialias=true:hinting=true
-URxvt.letterSpace: -1
-
-URxvt*urgentOnBell: true
-
-URxvt*depth: 32
-URxvt*scrollBar: false
-
-! Clip board handling
-URxvt.perl-ext-common: clipboard,default,matcher
-URxvt.keysym.M-y:   perl:clipboard:copy
-URxvt.keysym.M-p:   perl:clipboard:paste
-URxvt.keysym.M-C-p: perl:clipboard:paste_escaped
-
-URxvt.url-launcher: /usr/bin/iceweasel
-URxvt.matcher.button:   1
-
-
-! ###    lovelybacon.deviantart.com   ####
-
-URxvt*termName:            rxvt
-URxvt*background:          #2d2d2d
-URxvt*foreground:          #dedede
-URxvt*highlightColor:      lightsteelblue
-URxvt*highlightTextColor:  #2d2d2d
-URxvt*matcher.button:      1
-URxvt.transparent:         true
-! urxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt.shading:             20
-! fades 50% when focus is lost
-URxvt.fading:              50
-URxvt*allow_bold:          false
-!Xft*dpi:                   96
-!Xft*antialias:             true
-!Xft*hinting:               full
-
-! URxvt*geometry: 85x11
-! URxvt*fading:        0
-! URxvt*tintColor:     #ffffff
-! URxvt*shading:        0
-! URxvt*inheritPixmap:     False
+! Fontserver
+! 2560x1440 , 25Inch -> DPI: 117
+Xft*dpi:                   117
+Xft*antialias:             true
+Xft*hinting:               full
 
