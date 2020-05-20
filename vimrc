@@ -6,7 +6,7 @@ set runtimepath+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/Vundle.vim'
+Bundle 'VundleVim/Vundle.vim'
 
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
