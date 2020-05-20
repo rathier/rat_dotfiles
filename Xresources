@@ -1,71 +1,38 @@
 ! eigene versuche
 ! xterm
 *localTerminal:  xterm-256color
-*xterm*termName: xterm-256color
+XTerm*termName: xterm-256color
 *customization:  -256color
 
 ! resources for xterms
-*xterm*faceName:        Inconsolata
-*xterm*faceSize:        12
-*xterm*background:      white
-*xterm*cursorColor:     #0033cc
-*xterm*pointerColor:    steelblue
-*xterm*fullCursor:      false
-*xterm*cursorBlink:     true
-*xterm*deiconifyWarp:   true
-*xterm*foreground:      black
-*xterm*locale:          true
-*xterm*internalBorder:  0
-*xterm*visualBell:      true
-*xterm*jumpScroll:      true
-*xterm*highlightColor:  lightsteelblue
-*xterm*scrollBar:       false
-*xterm*saveLines:       0
+XTerm*faceName:        Inconsolata
+XTerm*faceSize:        11
+XTerm*background:      white
+XTerm*cursorColor:     #0033cc
+XTerm*pointerColor:    steelblue
+XTerm*fullCursor:      false
+XTerm*cursorBlink:     true
+XTerm*deiconifyWarp:   true
+XTerm*foreground:      black
+XTerm*locale:          true
+XTerm*internalBorder:  0
+XTerm*visualBell:      true
+XTerm*jumpScroll:      true
+XTerm*highlightColor:  lightsteelblue
+XTerm*scrollBar:       false
+XTerm*saveLines:       0
 !Make sure xterm handles NLS input
-*xterm*eightBitInput:   true
+XTerm*eightBitInput:   true
 !make sure backspace works as labeled
-*xterm*stty:            erase
-*xterm*BackarrowKey:    true
+XTerm*stty:            erase
+XTerm*BackarrowKey:    true
 !!xterm-colors
 !
-!black
-!*xterm*color0:    #000000
-!red
-!*xterm*color1:    #800000
-!green
-!*xterm*color2:    #008000
-!yellow
-*xterm*color3:    #808000
-!blue
-!*xterm*color4:    #000080
-!purple
-!*xterm*color5:    #800080
-!cyan
-!*xterm*color6:    #008080
-!white
-!*xterm*color7:    #c0c0c0
-!bright colors
-!bright black - gray
-!*xterm*color8:    #808080
-!bright red
-!*xterm*color9:    #cf6171
-!bright green
-!*xterm*color10:     #c5f779
-!bright yellow
-!*xterm*color11:     #fff796
-!bright blue
-!*xterm*color12:     #5c5cff
-!bright purple
-!*xterm*color13:     #cf9ebe
-!bright cyan
-!*xterm*color14:     #71bebe
-!bright white
-!*xterm*color15:     #ffffff
 !
 ! Bei Doppelklick / als normalen Buchstaben auffassen
 ! XTerm*charClass:                47:48
 ! Bei Doppelklick -./@:~ als normalen Buchstaben auffassen
-*xterm*charClass:                45-47:48,64:48,58:48,126:48
+XTerm*charClass:                45-47:48,64:48,58:48,126:48
 
 ! urxvt
 ! Prev was 13.
@@ -76,8 +43,8 @@ URxvt.letterSpace: -1
 
 URxvt*urgentOnBell: true
 
-urxvt*depth: 32
-urxvt*scrollBar: false
+URxvt*depth: 32
+URxvt*scrollBar: false
 
 ! Clip board handling
 URxvt.perl-ext-common: clipboard,default,matcher
@@ -88,38 +55,21 @@ URxvt.keysym.M-C-p: perl:clipboard:paste_escaped
 URxvt.url-launcher: /usr/bin/iceweasel
 URxvt.matcher.button:   1
 
-!*color0:#555753
-! *color0:#000000
-! *color8:#202020
-! *color1:#CC0000
-! *color9:#EF2929
-! *color2:#6AAD2B
-! *color10:#ABFD5B
-! *color3:#C4A000
-! *color11:#FCE94F
-! *color4:#3465A4
-! *color12:#1793D0
-! *color5:#948696
-! *color13:#BCACBB
-! *color6:#06989A
-! *color14:#34E2E2
-! *color7:#EEEEEE
-! *color15:#FFFFFF
 
 ! ###    lovelybacon.deviantart.com   ####
 
-urxvt*termName:            rxvt
-urxvt*background:          #2d2d2d
-urxvt*foreground:          #dedede
-urxvt*highlightColor:      lightsteelblue
-urxvt*highlightTextColor:  #2d2d2d
-urxvt*matcher.button:      1
-urxvt.transparent:         true
+URxvt*termName:            rxvt
+URxvt*background:          #2d2d2d
+URxvt*foreground:          #dedede
+URxvt*highlightColor:      lightsteelblue
+URxvt*highlightTextColor:  #2d2d2d
+URxvt*matcher.button:      1
+URxvt.transparent:         true
 ! urxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-urxvt.shading:             20
+URxvt.shading:             20
 ! fades 50% when focus is lost
-urxvt.fading:              50
-urxvt*allow_bold:          false
+URxvt.fading:              50
+URxvt*allow_bold:          false
 !Xft*dpi:                   96
 !Xft*antialias:             true
 !Xft*hinting:               full
@@ -130,27 +80,3 @@ urxvt*allow_bold:          false
 ! URxvt*shading:        0
 ! URxvt*inheritPixmap:     False
 
-!black  0=htop colors dedede
- *color0:  #2d2d2d
- *color8: #dedede
-!red
- *color1:  #d64937
- *color9:  #d64937
-!green
- *color2:  #4ac237
- *color10: #4ac237
-!yellow
- *color3:  #ded32e
- *color11: #ded32e
-!blue
- *color4:  #3465A4
- *color12: #1793D0
-!magenta
- *color5:  #d64937
- *color13: #d64937
-!cyan
- *color6:  #32bbc2
- *color14: #dedede
-!white
- *color7:  #dedede
- *color15: #dedede
