@@ -96,7 +96,7 @@ endif
 
 if has("gui_running")
 "    set guifont="Courier 10 Pitch 10"
-    set guifont=Inconsolata\ 12
+    set guifont=Inconsolata\ 11
     set guioptions-=m
     set guioptions-=b
     set guioptions-=T
