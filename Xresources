@@ -7,8 +7,6 @@ UXTerm*termName: xterm-256color
 ! resources for xterms
 UXTerm*faceName:        Inconsolata
 UXTerm*faceSize:        10
-UXTerm*background:      white
-UXTerm*cursorColor:     #0033cc
 UXTerm*pointerColor:    steelblue
 UXTerm*fullCursor:      false
 UXTerm*cursorBlink:     true
@@ -18,7 +16,7 @@ UXTerm*locale:          true
 UXTerm*internalBorder:  0
 UXTerm*visualBell:      true
 UXTerm*jumpScroll:      true
-UXTerm*highlightColor:  lightsteelblue
+UXTerm*highlightColor:  steelblue
 UXTerm*scrollBar:       false
 UXTerm*saveLines:       0
 !Make sure xterm handles NLS input
