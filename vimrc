@@ -84,9 +84,8 @@ set encoding=utf-8
 set laststatus=2
 set foldenable
 set foldmethod=marker
-set background=light
-let g:lucius_style='light'
-set background=light
+let g:lucius_style='dark'
+set background=dark
 set relativenumber
 
 if has("syntax")
