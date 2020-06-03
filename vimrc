@@ -84,26 +84,26 @@ set encoding=utf-8
 set laststatus=2
 set foldenable
 set foldmethod=marker
-let g:lucius_style='dark'
-set background=dark
 set relativenumber
 
 if has("syntax")
   syntax on
-  colorscheme lucius
 endif
 
 if has("gui_running")
-"    set guifont="Courier 10 Pitch 10"
-    set guifont=Inconsolata\ 10
-    set guioptions-=m
-    set guioptions-=b
-    set guioptions-=T
-    set guioptions-=l
-    set guioptions-=L
-    set guioptions-=r
-    set guioptions-=R
-    set guioptions+=c
+  colorscheme solarized
+  "let g:lucius_style='dark'
+  set background=dark
+  "set guifont="Courier 10 Pitch 10"
+  set guifont=Inconsolata\ 12
+  set guioptions-=m
+  set guioptions-=b
+  set guioptions-=T
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions+=c
 endif
 " }}}
 
