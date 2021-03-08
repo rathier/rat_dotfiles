@@ -155,6 +155,8 @@ ino <up> <Nop>
 let g:snips_author="Rainer Thierfelder"
 let g:snips_email="r.thierfelder@science-computing.de"
 let g:snips_github=""
+" old snipmate-parser is deprecated
+let g:snipMate = { 'snippet_version' : 1 }
 " /snipmate-config }}}
 
 " fuer latex-suite, wegen grep-Problemen:
