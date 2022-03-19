@@ -105,6 +105,11 @@ if has("gui_running")
   set guioptions-=R
   set guioptions+=c
 endif
+
+" vimwiki settings
+" use markdown instead of vimwiki-syntax
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 " }}}
 
 if exists("&colorcolumn")
