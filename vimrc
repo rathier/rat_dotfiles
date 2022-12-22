@@ -95,7 +95,7 @@ if has("gui_running")
   "let g:lucius_style='dark'
   set background=dark
   "set guifont="Courier 10 Pitch 10"
-  set guifont=Inconsolata\ 11
+  set guifont=Inconsolata\ 10
   set guioptions-=m
   set guioptions-=b
   set guioptions-=T
