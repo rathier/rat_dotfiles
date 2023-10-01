@@ -110,6 +110,8 @@ endif
 " use markdown instead of vimwiki-syntax
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_folding = 'custom'
+let g:markdown_folding = 1
 " }}}
 
 if exists("&colorcolumn")
@@ -119,6 +121,10 @@ endif
 if has("autocmd")
   autocmd BufWritePost .vimrc nested source $MYVIMRC
   autocmd BufWritePost rat_dotfiles/vimrc nested source $MYVIMRC
+  " for vimwiki / markdown
+  au FileType markdown syn sync fromstart
+  au FileType markdown set foldmethod=syntax
+  au FileType vimwiki set foldmethod=syntax
 endif
 "
 "
