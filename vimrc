@@ -85,6 +85,7 @@ set laststatus=2
 set foldenable
 set foldmethod=marker
 set relativenumber
+set history=200 " history of ex-commands, default 50
 
 if has("syntax")
   syntax on
