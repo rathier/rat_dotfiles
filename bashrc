@@ -56,8 +56,8 @@ shopt -s checkwinsize
 _VIM=$(type -p vim)
 [ -x "${_VIM}" ] && export EDITOR="${_VIM}"
 
-expand_path ~/bin before
-expand_path ~/.local/bin before
+#expand_path ~/bin before
+#expand_path ~/.local/bin before
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
