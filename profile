@@ -9,25 +9,6 @@
 #umask 022
 
 ## functions {{{1
-expand_path () {
-    # usage: expand_path path [[after]|before]
-    _before=""
-    _after=""
-    # if given with / at the end, delete it
-    _dir=${1%/}
-    if [[ -n "${2}" && ${2} = "before" ]]; then
-        _before="${_dir}:"
-    else
-        _after=":${_dir}"
-    fi
-    if [[ -d $_dir ]]; then
-        if [[ ${PATH} =~ (:|^)${_dir}(:|$) ]]; then
-            :
-        else
-            export PATH="${_before}${PATH}${_after}"
-        fi
-    fi
-}
 ## end functions }}}1
 
 # if running bash
@@ -38,6 +19,3 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-expand_path "${HOME}/bin" before
-expand_path "${HOME}/.local/bin" before
