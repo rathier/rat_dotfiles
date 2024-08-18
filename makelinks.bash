@@ -38,7 +38,7 @@ for file in $files; do
         mv ~/."$file" ~/dotfiles_old/
     fi
     echo "Creating symlink to $file in home directory."
-    ln -s "$dir"/"$file" ~/."$file"
+    ln -fs "$dir"/"$file" ~/."$file"
 done
 
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
