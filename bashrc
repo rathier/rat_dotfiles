@@ -21,25 +21,6 @@ coinflip () {
     eval echo \$$(( 1 + RANDOM % $# ))
 }
 
-expand_path () {
-    # usage: expand_path path [[after]|before]
-    _before=""
-    _after=""
-    # if given with / at the end, delete it
-    _dir=${1%/}
-    if [[ -n "${2}" && ${2} = "before" ]]; then
-        _before="${_dir}:"
-    else
-        _after=":${_dir}"
-    fi
-    if [[ -d $_dir ]]; then
-        if [[ ${PATH} =~ (:|^)${_dir}(:|$) ]]; then
-            :
-        else
-            export PATH="${_before}${PATH}${_after}"
-        fi
-    fi
-}
 
 find_vim_swaps () {
     find ~/ -name '*.sw[mnop]' -ls

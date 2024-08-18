@@ -7,7 +7,7 @@ dir=~/rat_dotfiles
 # old dotfiles backup directory
 olddir=~/dotfiles_old
 # list of files/folders to symlink in homedir
-files="bashrc vimrc screenrc tmux.conf Xresources"
+files="bashrc vimrc screenrc tmux.conf Xresources profile"
 
 setup_vundle() {
     mkdir -p ~/.vim/bundle
