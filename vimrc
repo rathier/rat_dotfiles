@@ -122,6 +122,7 @@ endif
 if has("autocmd")
   autocmd BufWritePost .vimrc nested source $MYVIMRC
   autocmd BufWritePost rat_dotfiles/vimrc nested source $MYVIMRC
+  autocmd! FocusLost scratchpad nested update
   " for vimwiki / markdown
   au FileType markdown syn sync fromstart
   au FileType markdown set foldmethod=syntax
@@ -147,6 +148,7 @@ let mapleader=","
 nmap <leader>v :tabnew $MYVIMRC<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
 nmap <leader>p :set paste!<CR>
+nnoremap <leader>cd :call RATCreateDayFrame()<CR>
 " nmap <F9> :call RATPingHost("<cword>")<CR>
 " unite-mappings {{{2
 nnoremap <leader>b :<C-u>Unite buffer<CR>
@@ -198,4 +200,29 @@ let g:Twiki_SourceHTMLSyntax=0
 "abkuerzungen {{{
 iab dts <C-R>=strftime("%F")<CR>
 iab lcts <C-R>=strftime("%c %Z")<CR>
+" }}}
+"
+
+" own functions {{{
+if exists("vim_functions_rat_loaded")
+    finish
+endif
+
+let vim_functions_rat_loaded = 1
+
+function RATDeleteSpaces()
+    %s/[[:space:]]*\ze$//
+endfunction
+
+function RATInsertDate()
+"    let l:DateString=strftime("%F")
+"    call printf("%s",l:DateString)
+    r !date +"\%F"
+ endfunction
+
+function RATCreateDayFrame()
+   normal 'tOdts HO ^Omt{{{1^M}}}1^MESC
+endfunction
+
+"
 " }}}
