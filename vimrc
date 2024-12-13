@@ -221,7 +221,7 @@ function RATInsertDate()
  endfunction
 
 function RATCreateDayFrame()
-   normal 'tOdts HO mt{{{1}}}1ESC
+   normal 'tOdts HO mt{{{1}}}1
 endfunction
 
 "
