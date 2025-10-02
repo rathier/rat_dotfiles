@@ -27,6 +27,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'wimstefan/Lightning'
 Bundle 'vimwiki/vimwiki'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'github/copilot.vim'
 "Bundle 'dogrover/vim-pentadactyl'
 "Bundle 'SirVer/ultisnips'
 
@@ -144,7 +145,9 @@ let g:airline_theme = 'lucius'
 let g:airline_symbols.paste = 'Þ'
 " /airline-configuration }}}
 " mappings {{{
-let mapleader=","
+" don't map , to leader, , is reverse ; -> repeat character search (in the
+"   other direction)
+" let mapleader=","
 nmap <leader>v :tabnew $MYVIMRC<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
 nmap <leader>p :set paste!<CR>
