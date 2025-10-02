@@ -37,4 +37,7 @@ UXTerm*charClass:                45-47:48,64:48,58:48,126:48
 Xft*dpi:                   117
 Xft*antialias:             true
 Xft*hinting:               full
+! for st
+st*faceName:        Inconsolata
+st*faceSize:        12
 
