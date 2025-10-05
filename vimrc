@@ -28,6 +28,7 @@ Bundle 'wimstefan/Lightning'
 Bundle 'vimwiki/vimwiki'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'github/copilot.vim'
+Plugin 'DanBradbury/copilot-chat.vim'
 "Bundle 'dogrover/vim-pentadactyl'
 "Bundle 'SirVer/ultisnips'
 
